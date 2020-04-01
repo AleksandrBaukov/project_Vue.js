@@ -7,7 +7,7 @@ const app = new Vue({
             return fetch(url)
                 .then(result => result.json())
                 .catch(error => {
-                     console.log(error);
+                    //  console.log(error);
                     this.$refs.error.setError(error);
                 })
         },
@@ -21,7 +21,7 @@ const app = new Vue({
             })
                 .then(result => result.json())
                 .catch(error => {
-                     console.log(error);
+                    //  console.log(error);
                     this.$refs.error.setError(error);
                 })
         },
@@ -35,7 +35,7 @@ const app = new Vue({
             })
                 .then(result => result.json())
                 .catch(error => {
-                     console.log(error);
+                    //  console.log(error);
                     this.$refs.error.setError(error);
                 })
         },
@@ -49,7 +49,7 @@ const app = new Vue({
             })
                 .then(result => result.json())
                 .catch(error => {
-                     console.log(error);
+                    //  console.log(error);
                     this.$refs.error.setError(error);
                 })
         },
