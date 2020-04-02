@@ -4,7 +4,7 @@ Vue.component('products', {
             catalogUrl: '/catalogData.json',
             products: [],
             filtered: [],
-            imgCatalog: 'https://placehold.it/370x237',
+            // imgCatalog: 'https://placehold.it/370x237',
         }
     },
     methods: {
@@ -24,7 +24,7 @@ Vue.component('products', {
     },
     template: `
             <div class="progects-blocks">
-                <product v-for="item of filtered" :key="item.id_product" :img="imgCatalog" :product="item"></product>
+                <product v-for="item of filtered" :key="item.id_product" :img="item.image" :product="item"></product>
             </div>
     `
 });
@@ -32,12 +32,13 @@ Vue.component('product', {
     props: ['product', 'img'],
     template: `
     <div class="progects-blocks-item">
-                <img :src="img" alt="Some img">
+                <img :src="img" alt="Some img" width="370px" height="237px">
                 <div class="progects-blocks-item-wrp progects-blocks-item-wrp-catalog">
-                    <h3 class="progects-blocks-item-wrp-title">{{product.product_name}}</h3>					
+                    <h3 class="progects-blocks-item-wrp-title progects-blocks-item-wrp-title-catalog">{{product.product_name}}</h3>					
                     <p class="progects-blocks-item-wrp-text progects-blocks-item-wrp-text-catalog">{{product.price}} $</p>
                     <button class="buy-btn" @click="$root.$refs.cart.addProduct(product)"><span class="buy-btn-txt">Купить</span></button>
                 </div>
             </div>
     `
 })
+

@@ -700,8 +700,13 @@ main {
     font-weight: 300;
     line-height: 20px;
 }
+.progects-blocks-item-wrp-title-catalog{
+    margin: 0;
+    font-size: 25px;
+}
 .progects-blocks-item-wrp-text-catalog{
-
+    margin: 20px 0;
+    font-size: 20px;
 }
 .progects-blocks-item:hover .progects-blocks-item-wrp-text {
     color: #c7b299;
