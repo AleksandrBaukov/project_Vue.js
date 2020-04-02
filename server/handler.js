@@ -15,9 +15,9 @@ let handler = async (req, res, action, file) => {
             let newCart = actions[action](JSON.parse(data), req);
           await fs.writeFile(file, newCart, (err) => {
                 if(err){
-                    res.send('{"result": 0}');
+                    res.sendStatus(404, JSON.stringify({result: 0, text: err}))
                 } else {
-                    res.send('{"result": 1}');
+                    res.send(JSON.stringify({result: 1}))
                 }
             })
         }

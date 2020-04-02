@@ -122,12 +122,15 @@ nav a:hover {
 nav a:active {
     color: #31bb37;
 }
-nav a:nth-child(2) {
+.nav-active{
+    color: #c7b299
+}
+/* nav a:nth-child(2) {
     color: #c7b299;
 }
 nav a:nth-child(2):active {
     color: #31bb37;
-}
+} */
 .head-icons {
     margin: 0;
     padding: 20px 0 0 0;
@@ -208,7 +211,7 @@ input[type="search"]:focus {
     background-color: white;
     padding: 15px;
     color: black;
-    width: 300px;
+    width: 330px;
 }
 
 .invisible{
@@ -225,7 +228,7 @@ input[type="search"]:focus {
     border-right: 10px solid transparent;
     border-bottom: 10px solid white;
 }
-.cartItem{
+.cart-item{
     margin: 10px;
     display: flex;
     justify-content: space-between;
@@ -647,6 +650,13 @@ main {
 .progects-blocks-item:hover .progects-blocks-item-wrp:before {
     border-bottom: 10px solid #362f2d;
 }
+.progects-blocks-item:hover .progects-blocks-item-wrp-catalog{
+    background-color: #c7b299;
+}
+.progects-blocks-item:hover .progects-blocks-item-wrp-catalog::before{
+    border-bottom: 10px solid #c7b299;
+}
+/* progects-blocks-item-wrp-catalog */
 .progects-blocks-item:hover .progects-blocks-item-link {
     display: block;
 }
@@ -669,6 +679,9 @@ main {
     top: -25px;
     left: 19px;
 }
+.progects-blocks-item-wrp-catalog{
+    padding: 30px 0 10px 30px;
+}
 .progects-blocks-item-wrp-title {
     display: block;
     color: #c7b299;
@@ -687,8 +700,14 @@ main {
     font-weight: 300;
     line-height: 20px;
 }
+.progects-blocks-item-wrp-text-catalog{
+
+}
 .progects-blocks-item:hover .progects-blocks-item-wrp-text {
     color: #c7b299;
+}
+.progects-blocks-item:hover .progects-blocks-item-wrp-text-catalog {
+    color: #362f2d;
 }
 .progects-blocks-item-link,
 .progects-blocks-item-search {
@@ -754,6 +773,34 @@ main {
 }
 .progects-button:active {
     background-color: #444441;
+}
+.buy-btn{
+    display: flex;
+    margin: 0 auto;
+    width: 170px;
+    height: 50px;
+    box-shadow: inset 0 -3px 0 #736357;
+    border-radius: 3px;
+    background-color: #998675;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 23px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+.buy-btn:hover{
+    background-color: #2b2929;
+}
+.buy-btn:active{
+    background-color: #444441;
+}
+.buy-btn-txt{
+    margin: auto;
 }
 .video {
     margin: 0;

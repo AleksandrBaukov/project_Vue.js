@@ -33,10 +33,10 @@ Vue.component('product', {
     template: `
     <div class="progects-blocks-item">
                 <img :src="img" alt="Some img">
-                <div class="progects-blocks-item-wrp">
-                    <h3  class="latest-proj-article-preview-title">{{product.product_name}}</h3>					
-                    <p>{{product.price}} $</p>
-                    <button class="buy-btn slider-link-btn" @click="$root.$refs.cart.addProduct(product)"><span class="slider-link-btn-txt">Купить</span></button>
+                <div class="progects-blocks-item-wrp progects-blocks-item-wrp-catalog">
+                    <h3 class="progects-blocks-item-wrp-title">{{product.product_name}}</h3>					
+                    <p class="progects-blocks-item-wrp-text progects-blocks-item-wrp-text-catalog">{{product.price}} $</p>
+                    <button class="buy-btn" @click="$root.$refs.cart.addProduct(product)"><span class="buy-btn-txt">Купить</span></button>
                 </div>
             </div>
     `

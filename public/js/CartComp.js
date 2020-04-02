@@ -11,7 +11,7 @@ Vue.component('cart', {
         addProduct(product) {
 
             let find = this.cartItems.find(el => el.id_product === product.id_product);
-            console.log(find);
+            // console.log(find);
             if (find) {
                 this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: 1})
                     .then(data => {
@@ -45,19 +45,16 @@ Vue.component('cart', {
                         })
                 }
             }
-        }
-
-
+        },        
     },
     mounted() {
         this.$parent.getJson(`/api/cart`)
             .then(data => {
                 for (let el of data.contents) {
-                    this.cartItems.push(el);
+                    this.$data.cartItems.push(el);
                 }
             });
-    }
-    ,
+    },
     template: `
 <div>
         <button class="icon-cart" type="button" @click="showCart = !showCart"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">

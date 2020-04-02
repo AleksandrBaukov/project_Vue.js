@@ -13,14 +13,14 @@ router.get('/catalog', (req, res) => {
     })
 });
 
-router.post('/catalog', (req, res) => {
+router.post('/', (req, res) => {
     handler(req, res, 'add', 'server/db/userCart.json');
 });
-router.put('/catalog/:id', (req, res) => {
+router.put('/:id', (req, res) => {
     handler(req, res, 'change', 'server/db/userCart.json');
 });
 
-router.delete('/catalog/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
    await handler(req, res, 'delete', 'server/db/userCart.json');
 });
 

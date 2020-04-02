@@ -26,5 +26,4 @@ module.exports = {
     add,
     change,
     del
-
 };

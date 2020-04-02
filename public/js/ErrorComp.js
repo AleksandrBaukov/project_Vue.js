@@ -4,11 +4,11 @@ Vue.component('error', {
             text: ''
         }
     },
-    methods: {
-      setError(error){
-          this.text = error
-      }
-    },
+    // methods: {
+    //   setError(error){
+    //       this.text = error
+    //   }
+    // },
     computed: {
       isVisible(){
           return this.text !== ''
@@ -17,7 +17,7 @@ Vue.component('error', {
     template: `
     <div class="error-block" v-if="isVisible"> 
         <p class="error-msg">
-            <button class="close-btn" @click="setError('')">&times;</button>
+            <button class="close-btn" @click="text=''">&times;</button>
             {{ text }}
         </p>
     </div>
