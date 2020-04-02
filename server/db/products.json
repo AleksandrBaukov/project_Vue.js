@@ -3,56 +3,56 @@
     "id_product": 1,
     "product_name": "Asus Predator",
     "price": 5000,
-    "category": "notebook",
+    "category": "1",
     "image": "/img/asusPredator.jpg"
   },
   {
     "id_product": 2,
     "product_name": "Asus VivoBook",
     "price": 500,
-    "category": "notebook",
+    "category": "1",
     "image": "/img/asusVivoBook.jpg"
   },
     {
     "id_product": 3,
     "product_name": "Iphone 11",
     "price": 1000,
-    "category": "phone",
+    "category": "2",
     "image": "/img/iphone11.jpg"
   },
   {
     "id_product": 4,
     "product_name": "Iphone 11 Pro",
     "price": 1500,
-    "category": "phone",
+    "category": "2",
     "image": "/img/iphone11pro.jpeg"
   },
   {
     "id_product": 5,
     "product_name": "MacBook Pro",
     "price": 4000,
-    "category": "notebook",
+    "category": "1",
     "image": "/img/macbookPro.jpg"
   },
   {
     "id_product": 6,
     "product_name": "OnePlus 7T",
     "price": 600,
-    "category": "phone",
+    "category": "2",
     "image": "/img/oneplus7t.jpg"
   },
   {
     "id_product": 7,
     "product_name": "OnePlus 7T Pro",
     "price": 800,
-    "category": "phone",
+    "category": "2",
     "image": "/img/oneplus7tPro.jpg"
   },
   {
     "id_product": 8,
     "product_name": "MacBook Air",
     "price": 1700,
-    "category": "notebook",
+    "category": "1",
     "image": "/img/macbookAir.jpg"
   }
 ]

@@ -212,6 +212,7 @@ input[type="search"]:focus {
     padding: 15px;
     color: black;
     width: 330px;
+    z-index: 10;
 }
 
 .invisible{
@@ -239,8 +240,8 @@ input[type="search"]:focus {
 .del-btn{
     border-radius: 5px;
     outline: none;
-    width: 28px;
-    height: 26px;
+    width: 40px;
+    height: 33px;
     margin: 5px;
 }
 .del-btn:hover{
@@ -253,9 +254,15 @@ input[type="search"]:focus {
     margin: 0 10px;
 }
 .product-title{
-    font-weight: bold;
-    font-size: large;
+    display: block;
+    color: #c7b299;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
     margin-bottom: 5px;
+}
+.product-price{
+    font-weight: bold;
 }
 .product-quantity{
     margin-bottom: 5px;
@@ -263,7 +270,26 @@ input[type="search"]:focus {
 .right-block{
     text-align: center;
 }
-
+.counter{
+    display: block;
+    color: #c7b299;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+}
+.counter-item{
+    color: black;
+}
+.priceCounter{
+    display: block;
+    color: #c7b299;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+}
+.priceCounter-item{
+    color: black;
+}
 
 .slider {
     margin: 0;

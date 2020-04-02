@@ -8,9 +8,16 @@ Vue.component('products', {
         }
     },
     methods: {
-        filter(value){
-            let regexp = new RegExp(value, 'i');
+        filter(userSearch){
+            let regexp = new RegExp(userSearch, 'i');
             this.filtered = this.products.filter(el => regexp.test(el.product_name));
+        },
+        filterByCategory(id) {
+            if (id == 0) {
+                this.filtered = this.products;
+            } else {
+                this.filtered = this.products.filter(el => el.category == id);
+            }
         }
     },
     mounted(){

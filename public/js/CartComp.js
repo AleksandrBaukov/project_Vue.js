@@ -1,10 +1,11 @@
 Vue.component('cart', {
     data() {
         return {
-            // imgCart: 'https://placehold.it/50x100',
             cartUrl: '/getBasket.json',
             cartItems: [],
             showCart: false,
+            counter: 0,
+            priceCounter: 0
         }
     },
     methods: {
@@ -42,10 +43,26 @@ Vue.component('cart', {
                                 }
 
                             }
+                             this.countCart(); 
+                             this.countCartPrice(); 
                         })
                 }
             }
-        },        
+        },   
+        countCart() {
+            let count = 0;
+            this.cartItems.forEach(item => {
+                count += item.quantity;
+                this.counter = count;
+            })
+        },
+        countCartPrice() {
+            let count = 0;
+            this.cartItems.forEach(item => {
+                count += item.quantity * item.price;
+                this.priceCounter = count;
+            })
+        }       
     },
     mounted() {
         this.$parent.getJson(`/api/cart`)
@@ -53,6 +70,8 @@ Vue.component('cart', {
                 for (let el of data.contents) {
                     this.$data.cartItems.push(el);
                 }
+                this.countCart(); 
+                this.countCartPrice(); 
             });
     },
     template: `
@@ -70,6 +89,8 @@ Vue.component('cart', {
             :img="item.image"
             @remove="remove">
         </cart-item>
+        <span class="counter">Items in Cart : <span class="counter-item">{{ counter }}</span></span>
+        <span class="priceCounter">Total amount : <span class="priceCounter-item">{{ priceCounter }} $</span></span>
     </div>
 </div>`
 })

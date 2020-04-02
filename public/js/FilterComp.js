@@ -11,3 +11,16 @@ Vue.component('filter-el', {
                     </form>
     `
 })
+
+Vue.component('category', {
+    data() {
+      return {
+          category: ''
+      }
+    },
+    template: `<div class="progects-nav">
+                    <button v-on:click="$parent.$refs.products.filterByCategory(0)"><span>All</span></button>
+                    <button v-on:click="$parent.$refs.products.filterByCategory(1)"><span>Notebooks</span></button>
+                    <button v-on:click="$parent.$refs.products.filterByCategory(2)"><span>Phones</span></button>
+                </div>`
+})
